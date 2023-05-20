@@ -9,14 +9,14 @@ use restoran;
 create table jelo(
 	id int not null primary key identity(1,1),
 	cijena money,
-	naziv int,
+	naziv varchar(50),
 	kategorija int not null,
 );
 
 
 create table pice(
 	id int not null primary key identity(1,1),
-	naziv int, 
+	naziv varchar(50), 
 	cijena money,
 );
 

@@ -59,3 +59,36 @@ alter table ljecenje add foreign key (doktor) references doktor(sifra);
 alter table ljecenje add foreign key (medicinskasestra) references medicinskasestra(sifra);
 alter table doktor	 add foreign key (odjel) references odjel(sifra);
 alter table medicinskasestra add foreign key (odjel) references odjel(sifra);
+
+
+
+insert into pacijent (doktor,ime,prezime,povijestbolesti,zdravstvenoosiguranje,simptomi) values('valentic','marin','lukas','anemican','1','kasalj');
+insert into pacijent (doktor,ime,prezime,povijestbolesti,zdravstvenoosiguranje,simptomi) values('maric','marko','mijatovic','hladnokrvan','1','prehlada');
+insert into pacijent (doktor,ime,prezime,povijestbolesti,zdravstvenoosiguranje,simptomi) values('jojic ','maja','zoric','srcanibolesnik','1','boluruci');
+insert into pacijent (doktor,ime,prezime,povijestbolesti,zdravstvenoosiguranje,simptomi) values('zaric','lea','lukic','srcanibolesnik','1','arestsrca');
+
+
+insert into odjel (naziv) values('prvikat');
+insert into odjel (naziv) values('drugikat');
+insert into odjel (naziv) values('trecikat');
+insert into odjel (naziv) values('cetvrtikat');
+
+insert into doktor(ime,prezime,oib,odjel) values('josip','valentic','09584928518','1');
+insert into doktor(ime,prezime,oib,odjel) values('petar','maric','09584928518','1');
+insert into doktor(ime,prezime,oib,odjel) values('kruno','jojic','09584928518','1');
+insert into doktor(ime,prezime,oib,odjel) values('valentin','zaric','09584928518','1');
+
+
+insert into medicinskasestra (doktor,ime,prezime,odjel) values('valentic','ksenija','jukisic','1')
+insert into medicinskasestra (doktor,ime,prezime,odjel) values('valentic','zera','karoli','1')
+insert into medicinskasestra (doktor,ime,prezime,odjel) values('valentic','julija','majic','1')
+insert into medicinskasestra (doktor,ime,prezime,odjel) values('valentic','karolija','marko','1')
+
+
+
+insert into ljecenje(trosakljecenja,dijagnoza,pacijent,doktor,medicinskasestra) values('1','dugotrajnaanemijaa','1','2','3');
+insert into ljecenje(trosakljecenja,dijagnoza,pacijent,doktor,medicinskasestra) values('2','dugotrajnaanemijaa','1','2','3');
+insert into ljecenje(trosakljecenja,dijagnoza,pacijent,doktor,medicinskasestra) values('1','srcanamana','1','2','3');
+insert into ljecenje(trosakljecenja,dijagnoza,pacijent,doktor,medicinskasestra) values('2','smrt','1','2','3');
+
+

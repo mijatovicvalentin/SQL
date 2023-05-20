@@ -58,6 +58,36 @@ create table suradnik_obrana(
 
 
 
+
+insert into odvjetnik (ured,ime,prezime,titula,oib,kontakt) values('lozertured','mario','lozert','1','09584827471','email');
+insert into odvjetnik (ured,ime,prezime,titula,oib,kontakt) values('petricured','mario','petric','1','80294827471','email');
+insert into odvjetnik (ured,ime,prezime,titula,oib,kontakt) values('branzerured','hektor','branzer','1','90284827471','email');
+insert into odvjetnik (ured,ime,prezime,titula,oib,kontakt) values('jukasured','leo','jukas','1','89485920175','email');
+
+
+insert into klijent (ime,prezime,kontakt) values('branimir','stulic','telefon');
+insert into klijent (ime,prezime,kontakt) values('zoran','makas','telefon');
+insert into klijent (ime,prezime,kontakt) values('julija','goric','telefon');
+insert into klijent (ime,prezime,kontakt) values('leonard','stompar','telefon');
+
+
+insert into suradnik (ime,prezime,oib) values('josip','valent','83029174861');
+insert into suradnik (ime,prezime,oib) values('kruno','petric','89847574861');
+insert into suradnik (ime,prezime,oib) values('ena','stojic','83029189586');
+insert into suradnik (ime,prezime,oib) values('lena','tolic','89479174861');
+
+insert into suradnik_obrana (obrana,suradnik) values('1','2');
+insert into suradnik_obrana (obrana,suradnik) values('1','2');
+insert into suradnik_obrana (obrana,suradnik) values('1','2');
+insert into suradnik_obrana (obrana,suradnik) values('1','2');
+
+insert into obrana (odvjetnik,klijent,trajanje,cijena,odluka) values('1','2','45','40','1');
+insert into obrana (odvjetnik,klijent,trajanje,cijena,odluka) values('1','2','45','60','2');
+insert into obrana (odvjetnik,klijent,trajanje,cijena,odluka) values('1','2','30','80','2');
+insert into obrana (odvjetnik,klijent,trajanje,cijena,odluka) values('1','2','35','25','1');
+
+
+
 alter table suradnik_obrana add foreign key (suradnik) references suradnik(id);
 alter table suradnik_obrana add foreign key (obrana) references obrana(id);
 alter table obrana add foreign key (klijent) references klijent(id);
